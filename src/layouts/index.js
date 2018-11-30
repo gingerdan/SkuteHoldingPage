@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import MainNav from '../components/mainNav'
+// import MainNav from '../components/mainNav'
 import './index.css'
 
 const Layout = ({ children, data }) => (
