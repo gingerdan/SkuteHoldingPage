@@ -39,20 +39,34 @@ class IndexPage extends React.Component {
           </div>
         )}
         <div className="wrapper">
-          <img
-            className="skute-logo"
-            src={require('../images/Skute_logo_cross.svg')}
-          />
-          <button onClick={this.handleOpen} className="video-button">
-            Watch video
-          </button>
-          <h1 className="tagline">The worlds first physical to digital fan network</h1>
+          <div className="hero">
+            <img
+              className="skute-logo"
+              src={require('../images/Skute_logo_cross.svg')}
+            />
+            <button onClick={this.handleOpen} className="video-button">
+              Watch video
+            </button>
+          </div>
+
+          <h1 className="tagline">
+            The worlds first physical to digital fan network
+          </h1>
           <div className="app-store-buttons">
-            <a href="https://itunes.apple.com/us/app/skute/id1438624407?ls=1&mt=8">
-              <img className="logo" src={require('../images/AppleStoreButton.svg')} />
+            <a
+              className="app-store-button"
+              href="https://itunes.apple.com/us/app/skute/id1438624407?ls=1&mt=8"
+            >
+              <img
+                className="logo"
+                src={require('../images/AppleStoreButton.svg')}
+              />
             </a>
-            <a href="/">
-              <img className="logo" src={require('../images/googlePlayButton.svg')} />
+            <a className="app-store-button" href="/">
+              <img
+                className="logo"
+                src={require('../images/googlePlayButton.svg')}
+              />
             </a>
           </div>
         </div>
