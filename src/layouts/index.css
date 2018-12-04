@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   line-height: 1.3;
   background-color: #ff2400;
+  /* background-color: rgba(20, 20, 20, 1); */
 }
 
 a {
@@ -57,9 +58,10 @@ a {
 }
 
 .tagline {
-  margin-top: 50px;
+  margin-top: 10px;
   font-size: 26px;
-  font-weight: 400;
+  letter-spacing: 1.2px;
+  font-weight: 700;
   text-align: center;
   color: white;
   padding: 0px 50px;
@@ -82,6 +84,24 @@ a {
   display: block;
 }
 
+.email-container{
+  width:100%;
+  bottom: 0;
+}
+.email-link {
+  color: white;
+  font-weight: 400;
+  text-decoration: underline;
+  /* position: absolute; */
+  display: flex;
+  align-items: right;
+  
+  padding: 20px;
+  /* right: 0;
+  bottom: 0; */
+
+}
+
 .overlay {
   display: flex;
   align-items: center;
@@ -89,7 +109,7 @@ a {
   position: fixed;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(20, 20, 20, 1);
   z-index: 1;
 }
 
@@ -104,13 +124,35 @@ a {
 }
 
 .iframe {
-  height: 45vw;
-  width: 80vw;
+  height: 56.5vw;
+  width: 100vw;
   border: 0;
 }
 
 @media (max-width: 549px) {
-  .AppStoreButtons img {
-    width: 150px;
+  .app-store-button img {
+    width: 160px;
   }
+  .hero {
+    max-width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  .video-button {
+    
+    font-size: 14px;
+    font-weight: 600;
+    
+    width: 200px;
+    height: 45px;
+    
+    top: 65%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    outline: none;
+  }
+  
 }

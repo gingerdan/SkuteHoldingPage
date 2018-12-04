@@ -32,9 +32,10 @@ class IndexPage extends React.Component {
             />
             <iframe
               className="iframe"
-              src="https://player.vimeo.com/video/303678443"
+              src="https://player.vimeo.com/video/303678443?muted=1"
               frameborder="0"
               allowfullscreen
+              autoplay="1"
             />
           </div>
         )}
@@ -49,9 +50,9 @@ class IndexPage extends React.Component {
             </button>
           </div>
 
-          <h1 className="tagline">
-            The worlds first physical to digital fan network
-          </h1>
+          {/* <h1 className="tagline">
+            CONNECT + DISCOVER
+          </h1> */}
           <div className="app-store-buttons">
             <a
               className="app-store-button"
@@ -62,11 +63,19 @@ class IndexPage extends React.Component {
                 src={require('../images/AppleStoreButton.svg')}
               />
             </a>
-            <a className="app-store-button" href="/">
+            <a
+              className="app-store-button"
+              href="https://play.google.com/store/apps/details?id=me.skute.skutestaging"
+            >
               <img
                 className="logo"
                 src={require('../images/googlePlayButton.svg')}
               />
+            </a>
+          </div>
+          <div classname="email-container">
+            <a className="email-link" href="mailto:hi@skute.me">
+              hi@skute.me
             </a>
           </div>
         </div>
