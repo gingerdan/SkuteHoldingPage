@@ -1,0 +1,183 @@
+body {
+  @import url('https://fonts.googleapis.com/css?family=Barlow+Condensed');
+  font-family: Avenir Next;
+  margin: 0;
+  font-size: 20px;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.3;
+  background-color: #ff2400;
+  /* background-color: rgba(20, 20, 20, 1); */
+}
+
+a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.wrapper {
+  background-image: url("./images/background_image_2.jpg");
+  background-size: cover;
+  background-position: center bottom;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.hero {
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.skute-logo {
+  width: 100%;
+}
+
+.video-button {
+  font-family: 'Barlow Condensed', sans-serif;
+  letter-spacing: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  background: #ff2400;
+  width: 230px;
+  height: 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 70%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  outline: none;
+}
+
+.tagline {
+  margin-top: 10px;
+  font-size: 26px;
+  letter-spacing: 1.2px;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+  padding: 0px 50px;
+}
+
+.app-store-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.app-store-button {
+  padding: 10px;
+  display: block;
+}
+
+.logo {
+  width: 180px;
+  display: block;
+}
+
+.email-container{
+  width:100%;
+  bottom: 0;
+}
+.email-link {
+  font-family: 'Barlow Condensed', sans-serif;
+  letter-spacing: 5px;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 600;
+  text-decoration: underline;
+  /* position: absolute; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  /* right: 0;
+  bottom: 0; */
+
+}
+
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(20, 20, 20, 1);
+  z-index: 1;
+}
+
+.close-overlay {
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+  position: absolute;
+  padding: 20px;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.video-desktop{
+  height: 56.5vw;
+  width: 100vw;
+  border: 0;
+  display: block;
+}
+.video-mobile{
+  height: 100vw;
+  width: 56vw;
+  border: 0;
+  display: none;
+}
+
+@media (max-width: 549px) {
+  .app-store-button img {
+    width: 160px;
+  }
+  .hero {
+    max-width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  .video-button {
+    font-size: 14px;
+    font-weight: 600;
+    width: 200px;
+    height: 45px;
+    top: 65%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    outline: none;
+  }
+  .video-desktop{
+    height: 56.5vw;
+    width: 100vw;
+    border: 0;
+    display: none;
+  }
+  .video-mobile{
+    height: 100vh;
+    width: 56.5vh;
+    border: 0;
+    display: block;
+  }
+  
+  
+}
