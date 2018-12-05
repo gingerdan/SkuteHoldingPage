@@ -1,60 +1,84 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, { Component } from "react";
+import logo from "./logo.svg";
 
 class App extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       overlayOpen: false,
-    }
+      windowHeight: window.innerHeight,
+      windowWidth: window.innerWidth
+    };
 
-    this.handleOpen = this.handleOpen.bind(this)
-    this.handleClose = this.handleClose.bind(this)
+    this.handleOpen = this.handleOpen.bind(this);
+    this.handleClose = this.handleClose.bind(this);
+    this.handleResize = this.handleResize.bind(this);
   }
 
+  componentDidMount() {
+    window.addEventListener("resize", this.handleResize);
+  }
+  handleResize() {
+    this.setState({
+      windowHeight: window.innerHeight,
+      windowWidth: window.innerWidth
+    });
+  }
   handleOpen() {
-    this.setState({ overlayOpen: true })
+    this.setState({ overlayOpen: true });
   }
 
   handleClose() {
-    this.setState({ overlayOpen: false })
+    this.setState({ overlayOpen: false });
   }
 
   render() {
+    const isDesktop = this.state.windowWidth > 549;
     return (
       <div>
         {this.state.overlayOpen && (
-          <div className="overlay">
+          <div className="overlay" style={{ height: this.state.windowHeight }}>
             <img
               className="close-overlay"
-              src={require('./images/CloseButton.svg')}
+              src={require("./images/CloseButton.svg")}
               onClick={this.handleClose}
             />
             <div className="vid-container">
-              <video
-                className="video-mobile"
-                controls
-                autoPlay
-                muted
-                loop
-                src="https://s3-eu-west-1.amazonaws.com/skute-holdingpage/media/Skute_Portrait.mp4"
-              />
-              <video
-                className="video-desktop"
-                controls
-                autoPlay
-                muted
-                loop
-                src="https://s3-eu-west-1.amazonaws.com/skute-holdingpage/media/Skute_landscape.mp4"
-              />
+              {isDesktop ? (
+                <video
+                  className="video-desktop"
+                  style={{
+                    width: this.state.windowWidth,
+                    height: (this.state.windowWidth * 9) / 16
+                  }}
+                  controls
+                  autoPlay
+                  muted
+                  loop
+                  src="https://s3-eu-west-1.amazonaws.com/skute-holdingpage/media/Skute_landscape.mp4"
+                />
+              ) : (
+                <video
+                  className="video-mobile"
+                  style={{
+                    width: (this.state.windowHeight * 9) / 16,
+                    height: this.state.windowHeight
+                  }}
+                  controls
+                  autoPlay
+                  muted
+                  loop
+                  src="https://s3-eu-west-1.amazonaws.com/skute-holdingpage/media/Skute_Portrait.mp4"
+                />
+              )}
             </div>
           </div>
         )}
-        <div className="wrapper">
+        <div className="wrapper" style={{ height: this.state.windowHeight }}>
           <div className="hero">
             <img
               className="skute-logo"
-              src={require('./images/Skute_logo_cross.svg')}
+              src={require("./images/Skute_logo_cross.svg")}
             />
             <button onClick={this.handleOpen} className="video-button">
               Watch video
@@ -71,7 +95,7 @@ class App extends React.Component {
             >
               <img
                 className="logo"
-                src={require('./images/AppleStoreButton.svg')}
+                src={require("./images/AppleStoreButton.svg")}
               />
             </a>
             <a
@@ -80,7 +104,7 @@ class App extends React.Component {
             >
               <img
                 className="logo"
-                src={require('./images/googlePlayButton.svg')}
+                src={require("./images/googlePlayButton.svg")}
               />
             </a>
           </div>
@@ -91,9 +115,8 @@ class App extends React.Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default App
-
+export default App;
