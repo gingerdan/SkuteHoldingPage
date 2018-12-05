@@ -75,6 +75,11 @@ class App extends React.Component {
           </div>
         )}
         <div className="wrapper" style={{ height: this.state.windowHeight }}>
+          <div className="slide1" />
+          <div className="slide2" />
+          <div className="slide3" />
+          <div className="slide4" />
+
           <div className="hero">
             <img
               className="skute-logo"

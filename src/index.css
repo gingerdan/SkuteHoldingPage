@@ -1,5 +1,5 @@
 body {
-  @import url('https://fonts.googleapis.com/css?family=Barlow+Condensed');
+  @import url("https://fonts.googleapis.com/css?family=Barlow+Condensed");
   font-family: Avenir Next;
   margin: 0;
   font-size: 20px;
@@ -16,13 +16,47 @@ a {
 }
 
 .wrapper {
-  background-image: url("./images/background_image_2.jpg");
+  /*background-image: url("./images/background_image_2.jpg");*/
   background-size: cover;
   background-position: center bottom;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.slide1,
+.slide2,
+.slide3,
+.slide4 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.slide1 {
+  background: url("./images/background_image.jpg") no-repeat center;
+  background-size: cover;
+  animation: fade 20s infinite;
+  -webkit-animation: fade 20s infinite;
+}
+.slide2 {
+  background: url("./images/background_image_2.jpg") no-repeat center;
+  background-size: cover;
+  animation: fade2 20s infinite;
+  -webkit-animation: fade2 20s infinite;
+}
+.slide3 {
+  background: url("./images/background_image_3.jpg") no-repeat center;
+  background-size: cover;
+  animation: fade3 20s infinite;
+  -webkit-animation: fade3 20s infinite;
+}
+.slide4 {
+  background: url("./images/background_image_5.jpg") no-repeat center;
+  background-size: cover;
+  animation: fade4 20s infinite;
+  -webkit-animation: fade4 20s infinite;
 }
 
 .hero {
@@ -38,7 +72,7 @@ a {
 }
 
 .video-button {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
   letter-spacing: 5px;
   font-size: 16px;
   font-weight: 600;
@@ -86,12 +120,12 @@ a {
   display: block;
 }
 
-.email-container{
-  width:100%;
+.email-container {
+  width: 100%;
   bottom: 0;
 }
 .email-link {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
   letter-spacing: 5px;
   font-size: 16px;
   text-transform: uppercase;
@@ -105,7 +139,6 @@ a {
   padding: 20px;
   /* right: 0;
   bottom: 0; */
-
 }
 
 .overlay {
@@ -130,13 +163,13 @@ a {
   z-index: 2;
 }
 
-.video-desktop{
+.video-desktop {
   height: 56.5vw;
   width: 100vw;
   border: 0;
   display: block;
 }
-.video-mobile{
+.video-mobile {
   height: 100vw;
   width: 56vw;
   border: 0;
@@ -168,18 +201,84 @@ a {
   .email-link {
     padding: 5px;
   }
-  .video-desktop{
+  .video-desktop {
     height: 56.5vw;
     width: 100vw;
     border: 0;
     display: none;
   }
-  .video-mobile{
+  .video-mobile {
     height: 100vh;
     width: 56.5vh;
     border: 0;
     display: block;
   }
-  
-  
+}
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade2 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade3 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade4 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
