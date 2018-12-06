@@ -88,11 +88,12 @@ class App extends React.Component {
             <button onClick={this.handleOpen} className="video-button">
               Watch video
             </button>
+            {/*<h1 className="tagline">CONNECT + DISCOVER</h1>*/}
+            <h1 className="tagline">
+              The worlds first physical to digital fan network
+            </h1>
           </div>
 
-          {/* <h1 className="tagline">
-            CONNECT + DISCOVER
-          </h1> */}
           <div className="app-store-buttons">
             <a
               className="app-store-button"
