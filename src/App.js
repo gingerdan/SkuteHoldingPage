@@ -74,12 +74,13 @@ class App extends React.Component {
             </div>
           </div>
         )}
-        <div className="wrapper" style={{ height: this.state.windowHeight }}>
+        <div className="slide-container">
           <div className="slide1" />
           <div className="slide2" />
           <div className="slide3" />
           <div className="slide4" />
-
+        </div>
+        <div className="wrapper" style={{ height: this.state.windowHeight }}>
           <div className="hero">
             <img
               className="skute-logo"
@@ -120,6 +121,9 @@ class App extends React.Component {
             </a>
           </div>
         </div>
+        {/*<div className="headline-container">
+          <h2 className="headline">What is skute anyway?</h2>
+        </div>*/}
       </div>
     );
   }
